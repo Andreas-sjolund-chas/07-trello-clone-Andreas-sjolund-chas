@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Andreas trello clone</title>
+
+    <!-- Optionally include jquery ui css here -->
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- Datedropper -->
+    <link href="datedropper.css" rel="stylesheet" type="text/css" />
+    <script src="datedropper.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="board">
+            
+        <!-- Module pattern
+            <body id="app">
+            
+        -->
+        <h1 class="heading__text">Andreas Trello clone</h1>
+        <!-- List - Todo -->
+        <div class="column">
+            <div class="list">
+                <div class="list-header">
+                    Todo
+                    <button class="button delete">X</button>
+                </div>
+                <ul class="list-cards wrapword">
+                    <li class="card">
+                       <a class="card-properties" href="">Example card</a>
+                       <p class="card-description">This is a description</p>
+                       <p class="due-date">26-2-2018</p>
+                        <button class="button delete">X</button>
+                        <span class="button edit">Edit</span>
+                    </li>
+                    <li class="add-new">
+                        <form class="new-card" action="index.html">
+                            <input type="text" name="title" placeholder="Please name the card" />
+                            <button class="button add">Add new card</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- List - Doing -->
+        <div class="column">
+            <div class="list">
+                <div class="list-header">
+                    Doing
+                    <button class="button delete">X</button>
+                </div>
+                <ul class="list-cards wrapword">
+                    
+                    <li class="add-new">
+                        <form class="new-card" action="index.html">
+                            <input type="text" name="title" placeholder="Please name the card" />
+                            <button class="button add">Add new card</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- List - Done -->
+        <div class="column">
+            <div class="list">
+                <div class="list-header">
+                    Done
+                    <button class="button delete">X</button>
+                </div>
+                <ul class="list-cards wrapword">
+                    <li class="add-new">
+                        <form class="new-card" action="index.html">
+                            <input type="text" name="title" placeholder="Please name the card" />
+                            <button class="button add">Add new card</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <button id="new-list" class="button">Add new list</button>
+    <!-- New list dialog -->
+    <div id="list-creation-dialog" title="Create new list">
+        <form> 
+            <input type="text" name="title" placeholder="List title" />
+        </form>
+    </div>
+    <!-- Card propertis dialog -->
+    <div id="card-properties-dialog" title="Change card properties">
+        <div id="card-tabs">
+            <ul>
+                <li class="tab"><a href="#tab1">Card info</a></li>
+                <li class="tab"><a href="#tab2">Update card</a></li>
+            </ul>
+            <div id="tab1">
+                <p class="card-title"></p>
+                <p class="card-description"></p>
+                <p class="card-due-date"></p>
+            </div>
+            <div id="tab2">
+                <form>
+                    <input type="text" name="title_update" placeholder="Change card title" value="" />
+                    <textarea name="text" name="description_update" placeholder="Please write a description for this card..." cols="30" rows="10"></textarea>
+                    <p class="due-date">Please select the due date below</p>
+                    <input type="text" name="date_update" placeholder="Please select a deadline" data-large-default="true" data-large-mode="true" class="datepicker" data-format="d-m-Y"></input>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+<script src="widget.js"></script>
+</html>
