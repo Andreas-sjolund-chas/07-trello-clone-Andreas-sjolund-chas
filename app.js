@@ -1,39 +1,4 @@
 $(function() {
-  // var Board = function () {
-  //   var defaultBoard = {
-  //       lists: [
-  //       {
-  //           id: 0,
-  //           title: 'Todo',
-  //           cards: [
-  //               {
-  //                   id: 3,
-  //                   title: 'Card in Todo'
-  //               }
-  //           ]
-  //       },
-  //       {
-  //           id: 1,
-  //           title: 'Doing',
-  //           cards: [
-  //               {
-  //                   id: 3,
-  //                   title: 'Card in Doing'
-  //               }
-  //           ]
-  //       },
-  //       {
-  //           id: 2,
-  //           title: 'Done',
-  //           cards: [
-  //               {
-  //                   id: 3,
-  //                   title: 'Card in Done'
-  //               }
-  //           ]
-  //       }
-  //       ]
-  //   };
 
   function initSort() {
 
@@ -235,13 +200,4 @@ $(function() {
     $(event.target).parent().toggle("explode");
     $(event.target).parent().remove();
   };
-
-
-  ////// Tried to check if list doesn't contain any cards
-
-  // var listChecker = $('.list-cards').not('.card');
-  // console.log(listChecker);
-  // listChecker.forEach(element => {
-  //   console.log(element);
-  // });
 });
